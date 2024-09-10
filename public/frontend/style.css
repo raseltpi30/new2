@@ -1,0 +1,1799 @@
+:root {
+    --heading-color: rgb(201, 199, 192);
+    /* Brown color for the heading */
+    --button-bg-color: rgb(201, 199, 192) !important;
+    /* Darker brown */
+    --button-hover-bg-color: rgb(191, 189, 182) !important;
+    /* Darker shade for hover effect */
+    --button-outline-color: #ccc;
+    /* Outline color for buttons */
+    --dropdown-bg-color: white;
+    /* White background for dropdowns */
+    --dropdown-hover-bg-color: #f0f0f0;
+    /* Light grey for hover effect */
+    --dropdown-text-color: #333;
+    /* Text color for dropdowns */
+    --dropdown-border-color: #999;
+    /* Border color for dropdowns */
+}
+
+/* Center content and headings */
+#yui_3_17_2_1_1721028986214_530,
+.container h1,
+.container h2 {
+    color: white !important;
+    text-align: center;
+    font-size: 68px;
+    /* Make the subtitle smaller */
+}
+
+/* Center container within the section */
+.outer-container {
+    max-width: none;
+}
+
+/* Center content and headings */
+.container {
+    text-align: center;
+    /* Center the container content */
+    max-width: none;
+    /* Ensure no capping */
+}
+
+.container h1 {
+    margin-top: 0;
+    /* Remove any top margin */
+}
+
+.container h2 {
+    font-size: 18px;
+    /* Make the subtitle smaller */
+    margin-top: 10px;
+    /* Adjust this value if needed */
+}
+
+/* Form Styles */
+.sqs-block-form {
+    max-width: 80% !important;
+    /* Increase the width to 80% of the container */
+    margin: 20px auto 0 auto;
+    /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* Adjust this value if needed to ensure vertical centering */
+}
+
+.sqs-block-form .field-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    /* Define three rows */
+    grid-template-areas:
+        "first-name last-name email"
+        "service bathroom frequency"
+        "submit submit submit";
+    grid-gap: 20px;
+    /* Increase the gap between rows and columns */
+    padding: 30px;
+    /* Increase padding for more space around the fields */
+    border: 2px solid var(--button-outline-color);
+    border-radius: 15px;
+    background: #f0f0f0;
+    /* Light grey background */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element's total width and height */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.sqs-block-form .field-list .field {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sqs-block-form .field-list .field label {
+    display: block;
+    font-weight: bold;
+    color: black;
+    /* Set label text color to black */
+    margin-bottom: 5px;
+}
+
+.sqs-block-form .field-list .field input,
+.sqs-block-form .field-list .field select {
+    width: 100%;
+    padding: 20px;
+    /* Increase padding for larger input fields */
+    box-sizing: border-box;
+    border: 1px solid var(--dropdown-border-color);
+    border-radius: 10px;
+    background: var(--dropdown-bg-color);
+    /* White background for dropdowns */
+    color: var(--dropdown-text-color);
+    /* Text color */
+    height: 60px;
+    /* Increase height for larger input fields */
+}
+
+/* Dropdown specific styles */
+.sqs-block-form .field-list .field select {
+    background: var(--dropdown-bg-color);
+    /* White background */
+    color: var(--dropdown-text-color);
+    /* Text color */
+    border: 1px solid var(--dropdown-border-color);
+    /* Border color */
+    border-radius: 10px;
+    padding: 20px;
+    /* Increase padding */
+}
+
+.sqs-block-form .field-list .field select:hover {
+    background: var(--dropdown-hover-bg-color);
+    /* Light grey on hover */
+}
+
+.sqs-block-form .field-list .field select:focus {
+    border-color: var(--button-bg-color);
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+/* Ensure all fields are the same height */
+.sqs-block-form .field-list .field input,
+.sqs-block-form .field-list .field select {
+    height: 60px;
+    /* Set the height */
+    width: 100%;
+    /* Set the width */
+}
+
+.sqs-block-form .field-list .first-name {
+    grid-area: first-name;
+}
+
+.sqs-block-form .field-list .last-name {
+    grid-area: last-name;
+}
+
+.sqs-block-form .field-list .email {
+    grid-area: email;
+}
+
+.sqs-block-form .field-list .service {
+    grid-area: service;
+}
+
+.sqs-block-form .field-list .bathroom {
+    grid-area: bathroom;
+}
+
+.sqs-block-form .field-list .frequency {
+    grid-area: frequency;
+}
+
+.sqs-block-form .field-list .submit-button {
+    grid-area: submit;
+    /* Span across all three columns */
+    text-align: center;
+}
+
+.sqs-block-form .field-list .submit-button a {
+    display: block;
+    width: 100%;
+    /* Extend the button to the full width */
+    padding: 25px;
+    /* Increase padding for a larger button */
+    background-color: var(--button-bg-color) !important;
+    /* Darker brown */
+    color: black !important;
+    /* Text color */
+    border: 1px solid var(--button-outline-color);
+    /* Button outline */
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element's total width and height */
+    font-size: 1.2em;
+    /* Increase font size */
+}
+
+.sqs-block-form .field-list .submit-button a:hover {
+    background-color: var(--button-hover-bg-color) !important;
+    /* Darker shade for hover effect */
+    color: white !important;
+    /* Text color on hover */
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the outer container to increase overall height by 10% */
+    .outer-container {
+        padding: 11px;
+        /* Increase padding slightly */
+        height: auto;
+        /* Ensure the height adjusts dynamically */
+    }
+
+    .sqs-block-form {
+        max-width: 100%;
+        /* Full width for mobile */
+        padding: 0 11px;
+        /* Increase side padding slightly */
+    }
+
+    .sqs-block-form .field-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 5.5px;
+        /* Increase padding slightly */
+        gap: 5.5px;
+        /* Increase space between fields slightly */
+    }
+
+    .sqs-block-form .field-list .field,
+    .sqs-block-form .field-list .submit-button {
+        width: 100%;
+        /* Full width for the fields */
+        max-width: 100%;
+    }
+
+    /* Adjusting input and select fields to be 10% taller */
+    .sqs-block-form .field-list .field input,
+    .sqs-block-form .field-list .field select {
+        padding: 5.5px 8.8px !important;
+        /* Increase padding by 10% */
+        font-size: 15.4px !important;
+        /* Increase font size by 10% */
+        height: 38.5px;
+        /* Increase height by 10% */
+        border-radius: 5.5px;
+        /* Increase border-radius slightly */
+    }
+
+    /* Add margin between the Frequency field and the Book button */
+    .sqs-block-form .field-list .submit-button {
+        margin-top: 11px;
+        /* Increase space above the button by 10% */
+    }
+
+    /* Adjust submit button padding */
+    .sqs-block-form .field-list .submit-button a {
+        padding: 11px !important;
+        /* Increase padding by 10% */
+        font-size: 15.4px !important;
+        /* Increase font size by 10% */
+    }
+
+    /* Adjust heading styles for mobile */
+    .container h1 {
+        font-size: 30.8px;
+        /* Increase font size by 10% */
+        margin-top: 22px;
+        /* Increase margin by 10% */
+    }
+
+    .container h2 {
+        font-size: 15.4px;
+        /* Increase subtitle size by 10% */
+        margin-top: 5.5px;
+        /* Increase margin for spacing by 10% */
+    }
+
+    /* Increase height of the CTA box by 10% */
+    .cta-box {
+        width: 90%;
+        max-width: 90%;
+        margin: 16.5px auto;
+        /* Increase margin to adjust height by 10% */
+        padding: 8.8px 0 !important;
+        /* Increase vertical padding by 10% */
+        font-size: 15.4px !important;
+        /* Increase font size by 10% */
+        line-height: 1.32 !important;
+        /* Increase line spacing by 10% */
+    }
+
+    /* Ensure images and other content do not overflow */
+    img,
+    iframe,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Title overlap fix */
+    .container h1 {
+        position: relative;
+        z-index: 1;
+        padding-top: 33px;
+        /* Increase padding by 10% */
+    }
+
+    /* Absolute positioned element adjustments */
+    .absolute-element {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Reliable css  */
+
+#custom-section {
+    position: relative;
+    background-image: url('https://static1.squarespace.com/static/6682192d1022a0098a1c29d9/t/66ba17ea5c003d228109fb1c/1723471855037/Trusted+Professionals+%282%29.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#custom-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Match the opacity to the second section */
+    z-index: 1;
+}
+
+/* Add a dark overlay */
+#custom-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+#custom-section .custom-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white !important;
+}
+
+/* Ensure all text elements are white */
+#custom-section h2,
+#custom-section p,
+#custom-section h3,
+#custom-section .feature-item p {
+    color: white !important;
+}
+
+/* Increase font size for the heading */
+#custom-section h2 {
+	font-size: 44px;
+	margin: 20px 0 40px 0;
+	font-weight: 400;
+}
+/* Centered content with max width */
+#custom-section p {
+    max-width: 800px;
+}
+
+/* Features container */
+#custom-section .features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: nowrap;
+}
+
+/* Adjust the feature icon position */
+#custom-section .feature-item .feature-icon {
+    margin-left: 49px;
+    /* Adjust this value as needed */
+}
+
+/* Individual feature items */
+#custom-section .feature-item {
+    padding: 20px;
+    width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Feature icons */
+#custom-section .feature-icon {
+    display: block;
+    margin: 0 auto 20px;
+    width: 70px !important;
+    height: 70px !important;
+}
+
+/* Remove default padding and margins */
+#custom-section .custom-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #custom-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        min-height: 100vh;
+        /* Ensure it covers the full viewport height */
+        position: relative;
+        /* To contain the overlay */
+    }
+
+    /* Adjust the position of the heading */
+    #custom-section h3 {
+        transform: translateX(-17px);
+        /* Adjust this value as needed */
+    }
+
+
+
+    #custom-section .feature-item .feature-icon {
+        margin-left: 145px;
+        /* Adjust this value as needed */
+        transform: translateY(-15px)
+    }
+
+    #custom-section:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Example dark overlay */
+        z-index: 1;
+    }
+
+    #custom-section .custom-content {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: center;
+        transform: translateX(-10px);
+        /* Shift content slightly to the left */
+        position: relative;
+        z-index: 2;
+        /* Ensure it is above the overlay */
+    }
+
+    #custom-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+        padding: 0 15px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+    }
+
+    #custom-section p {
+        font-size: 16px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 0 15px;
+        word-wrap: break-word;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+    }
+
+    #custom-section .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        transform: translateX(-10px);
+        /* Shift features slightly to the left */
+        position: relative;
+        z-index: 2;
+    }
+
+    #custom-section .feature-item {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    #custom-section .feature-icon {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 50px !important;
+        height: 50px !important;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+/* discount page css  */
+
+
+:root {
+    --button-bg-color: rgb(201, 199, 192) !important;
+    /* Darker brown */
+    --button-hover-bg-color: rgb(191, 189, 182) !important;
+    /* Darker shade for hover effect */
+    --section-bg-color: #fff;
+    /* Pure white background color for sections */
+    --text-color: #333;
+    /* Dark text color */
+    --promo-bg-color: #f9f9f9;
+    /* Light background color for promo section */
+}
+
+/* Promo Banner Styles */
+.promo-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--promo-bg-color);
+    padding: 10px !important;
+    /* Padding inside the banner */
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    /* Width of the banner */
+    margin: 20px auto;
+    /* Center the banner horizontally with top and bottom margins */
+    overflow: hidden;
+    /* Ensure content does not overflow */
+    transform: translateY(-30px) !important;
+    /* Move the banner up by 20px */
+}
+
+.promo-text {
+    max-width: 600px;
+    /* Limit the width of the text block */
+    text-align: center;
+    /* Center the text */
+    width: 100%;
+    padding: 0 15px;
+    /* Add padding to ensure content doesn't touch the edges */
+    box-sizing: border-box;
+}
+
+.promo-text h1 {
+    font-size: 1.8em;
+    /* Slightly smaller font size */
+    margin-bottom: 20px;
+    /* Space between elements */
+    color: black;
+    /* Title color black */
+}
+
+.promo-text p {
+    font-size: 1em;
+    /* Slightly smaller font size */
+    margin-bottom: 20px;
+    /* Space between elements */
+}
+
+.promo-text form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the form elements */
+}
+
+.promo-text input[type="text"],
+.promo-text input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    /* Space between input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    /* Full width for input fields */
+    max-width: 400px;
+    /* Limit the width of input fields */
+    box-sizing: border-box;
+}
+
+.promo-text button {
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    /* Darker brown color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.promo-text button:hover {
+    background-color: var(--button-hover-bg-color);
+    /* Darker shade for hover effect */
+}
+
+#yui_3_17_2_1_1721029560499_470 {
+    color: black !important;
+}
+
+/* Section containing the promo banner */
+.section-container {
+    padding: 60px 0;
+    /* Add padding to the top and bottom of the section */
+    background-color: var(--section-bg-color);
+    /* Ensure it matches the section background color */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .promo-banner {
+        padding: 15px;
+        /* Adjust padding for smaller screens */
+        width: calc(100% - 30px);
+        /* Reduce the overall width to prevent overflow */
+        max-width: 100%;
+        /* Ensure the banner doesn't exceed the screen width */
+        margin: 20px auto;
+        /* Center the banner with adjusted margins */
+        box-sizing: border-box;
+        /* Include padding in the element's total width and height */
+    }
+
+    .promo-text {
+        max-width: 100%;
+        /* Ensure the text block does not exceed the container width */
+        padding: 0 10px;
+        /* Ensure padding on smaller screens */
+        margin: -10px auto 0 auto;
+        /* Move up by 10px with a negative top margin */
+        text-align: center;
+        /* Center-align text */
+        box-sizing: border-box;
+        /* Include padding in the element's total width and height */
+        position: relative;
+        /* Allow positioning adjustments */
+        top: -20px;
+        /* Move up by 10px */
+    }
+
+    .promo-text h1 {
+        font-size: 1.5em;
+        /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+        /* Reduce space between title and other elements */
+    }
+
+    .promo-text p {
+        font-size: 0.9em;
+        /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+        /* Reduce space between paragraphs and other elements */
+    }
+
+    .promo-text input[type="text"],
+    .promo-text input[type="email"] {
+        max-width: 100%;
+        /* Ensure input fields do not exceed container width */
+        font-size: 0.9em;
+        /* Adjust font size for readability on smaller screens */
+        padding: 8px;
+        /* Reduce padding for input fields on smaller screens */
+    }
+
+    .promo-text button {
+        font-size: 0.9em;
+        /* Adjust button font size for smaller screens */
+        padding: 8px 15px;
+        /* Adjust padding for buttons on smaller screens */
+    }
+
+    #yui_3_17_2_1_1721029560499_470 {
+        color: black !important;
+    }
+}
+
+/* faq css  */
+:root {
+    --main-bg-color: #f9f9f9;
+    --card-bg-color: #fff;
+    --border-color: #ccc;
+    --text-color: #555;
+    --heading-color: #333;
+    --button-hover-bg-color: #91b9a3;
+}
+
+#yui_3_17_2_1_1721038524522_420 {
+    color: black !important;
+    font-size: 36px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h4,
+.question,
+.answer,
+p,
+.faq-category h4,
+.faq-item,
+.question,
+.answer {
+    color: black !important;
+    /* Ensures all text is black */
+    font-family: inherit;
+    text-align: left;
+}
+
+.faq-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.faq-category {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.faq-category h4 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.faq-item {
+    margin: 10px 0;
+}
+
+.question {
+    font-weight: normal;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    text-align: left;
+    color: black !important;
+    /* Ensures question text is black */
+}
+
+.question:before {
+    content: "+";
+    color: rgb(201, 199, 192);
+    position: absolute;
+    left: 0;
+}
+
+.answer {
+    display: none;
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+    color: black !important;
+    /* Ensures answer text is black */
+}
+
+.answer p,
+.answer ul,
+.answer li {
+    text-align: left;
+    margin-left: 0;
+    width: 100%;
+    color: black !important;
+    /* Ensures list items and paragraphs are black */
+}
+
+.answer ul {
+    padding-left: 20px;
+}
+
+.faq-category:nth-child(1),
+.faq-category:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.faq-category:nth-child(3),
+.faq-category:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.faq-container h2 {
+    text-align: center;
+}
+
+.faq-container p {
+    color: #666;
+    text-align: center;
+}
+
+.faq-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.faq-container .active .answer {
+    display: block;
+}
+
+.faq-title {
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+}
+
+.faq-title h2,
+.faq-title p {
+    margin: 0;
+    color: black !important;
+    font-family: inherit;
+}
+
+@media (max-width: 768px) {
+    .faq-row {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 110%;
+    }
+
+    .faq-category {
+        width: 140%;
+        margin-bottom: 0px !important;
+    }
+
+    .faq-category h4 {
+        width: 140%;
+        padding-left: 0;
+    }
+
+    .faq-item,
+    .question,
+    .answer {
+        width: 140%;
+        padding-left: 0;
+    }
+
+    .answer p,
+    .answer ul,
+    .answer li {
+        width: 140%;
+    }
+
+    .answer ul {
+        padding-left: 0px;
+        width: 100%;
+    }
+}
+
+/* comercial quets css  */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.header-section {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.form-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.form-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: normal !important;
+    /* Changed to normal weight */
+}
+
+.quote-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-form fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.quote-form legend {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.quote-form p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(201, 199, 192);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.form-group button:hover {
+    background-color: #a0a09a;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* contact us css  */
+
+:root {
+    --main-bg-color: #f9f9f9;
+    --card-bg-color: #fff;
+    --border-color: #ccc;
+    --text-color: #555;
+    --heading-color: #333;
+    --button-bg-color: rgb(201, 199, 192);
+    /* Darker brown */
+    --button-hover-bg-color: rgb(191, 189, 182);
+    /* Darker shade for hover effect */
+    --button-outline-color: #ccc;
+    /* Outline color for buttons */
+}
+
+#yui_3_17_2_1_1721038714633_424 {
+    color: black !important;
+    font-size: 36px !important;
+}
+
+
+/* General styles */
+body {
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+    /* Align the items to the top and close together */
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: var(--main-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    /* Adjust the gap between the sections */
+    max-width: 950px;
+    /* Set a slightly wider maximum width for the container */
+    margin: 0 auto;
+    /* Center the container on the page */
+}
+
+.contact-info {
+    max-width: 50%;
+    /* Adjust width to ensure enough space */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+    text-align: left;
+    /* Align heading text to the left */
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-align: left;
+    /* Align paragraph text to the left */
+}
+
+.contact-info a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    width: 60%;
+    /* Set a fixed width for the form */
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    /* Align text to the left */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+    text-align: left;
+    /* Align label text to the left */
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    text-align: left;
+    /* Align input text to the left */
+}
+
+.contact-form button {
+    background-color: var(--button-bg-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    /* Align button text to the left */
+}
+
+.contact-form button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        /* Stack the sections vertically */
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        /* Reduce gap between the sections */
+        max-width: 100%;
+        /* Use full width on mobile */
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 80%;
+        /* Use full width for both sections */
+        width: 100%;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+/* terms condition css  */
+
+:root {
+    --button-bg-color: rgb(201, 199, 192) !important;
+    --button-hover-bg-color: rgb(191, 189, 182) !important;
+    --button-outline-color: #ccc;
+    --email-link-color: #0073e6;
+}
+
+.terms-conditions {
+    width: 400%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #f9f9f9;
+    border: 1px solid var(--button-outline-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-conditions h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.terms-conditions h2,
+.terms-conditions p,
+.terms-conditions ul,
+.terms-conditions ul li,
+.terms-conditions strong {
+    text-align: left;
+}
+
+.terms-conditions h2 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.terms-conditions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.terms-conditions ul li,
+.terms-conditions p,
+.terms-conditions strong {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.terms-conditions a.email-link {
+    color: var(--email-link-color);
+    text-decoration: none;
+}
+
+.terms-conditions a.email-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .terms-conditions {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .terms-conditions h1 {
+        font-size: 1.5em;
+        margin-top: -30px !important;
+        /* Move the header up by 10px */
+    }
+
+    .terms-conditions h2 {
+        font-size: 1.2em;
+    }
+
+    .terms-conditions p,
+    .terms-conditions ul li {
+        font-size: 1em;
+    }
+}
+
+/* for thank you page  */
+
+/* Custom CSS for Squarespace */
+.thank-you-container {
+    width: 80%;
+    /* Adjust the width as needed */
+    max-width: 600px;
+    /* Set a maximum width */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 20px;
+    /* Add padding inside the box */
+    background-color: white;
+    /* Background color for the box */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    text-align: center;
+    /* Center-align text */
+}
+
+.thank-you-header {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    /* Ensure no background color */
+    border: none;
+    /* Ensure no border */
+    box-shadow: none;
+    /* Ensure no shadow */
+    margin: 0;
+    /* Remove margin */
+}
+
+.thank-you-line {
+    border-bottom: 1px solid #C4C4C4;
+    margin: 20px 0;
+}
+
+.thank-you-content {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* for header css  */
+
+:root {
+    --button-bg-color: #a0c4b0;
+    /* Turquoise color */
+    --button-hover-bg-color: #91b9a3;
+    /* Darker shade for hover effect */
+    --footer-bg-color: rgb(242, 240, 233);
+    /* Brown background for footer */
+    --footer-text-color: #000;
+    /* Black text color for footer */
+}
+
+/* Footer Styles */
+footer,
+.footer {
+    background-color: var(--footer-bg-color) !important;
+    color: var(--footer-text-color) !important;
+    padding: 20px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+}
+
+.footer-column {
+    margin-right: 10px;
+    /* Reduce spacing between columns */
+}
+
+.footer-column.menu {
+    width: 20%;
+    /* Adjust width as needed */
+}
+
+.footer-column.sydney-service-areas {
+    width: 40%;
+    /* Increase width to ensure it stays on one line */
+}
+
+.footer-column.footer-contact {
+    margin-left: auto;
+    /* Move Stay Connected to the far right */
+}
+
+.footer h3 {
+    color: var(--footer-text-color) !important;
+    font-weight: 600;
+    /* Slightly less bold */
+    font-size: 1.1rem;
+    /* Slightly smaller font size */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: var(--footer-text-color) !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--footer-text-color) !important;
+    /* Keep text color same on hover */
+}
+
+.footer input[type="email"] {
+    border: 1px solid var(--footer-text-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer input[type="email"]:focus {
+    outline: none;
+    border-color: var(--button-hover-bg-color);
+}
+
+.footer button {
+    background-color: var(--footer-text-color) !important;
+    /* Black color for button */
+    color: var(--footer-bg-color) !important;
+    /* Text color matching background */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background-color: var(--footer-text-color) !important;
+    /* Black color on hover */
+    color: var(--footer-bg-color) !important;
+    /* Text color matching background */
+}
+
+/* Removing turquoise color on hover for links */
+a:hover {
+    color: inherit !important;
+    /* Maintain the text color on hover */
+}
+
+.footer-column.footer-contact h3 {
+    margin-bottom: 5px;
+    /* Reduce the bottom margin */
+}
+
+.footer-column.footer-contact form {
+    margin-bottom: 10px;
+    /* Adjust the bottom margin if needed */
+}
+
+.footer-column.footer-contact form input[type="email"] {
+    margin-top: 0;
+    /* Remove any top margin */
+    padding: 5px;
+    /* Adjust padding for better spacing */
+}
+
+.footer-column.footer-contact form button {
+    margin-top: 5px;
+    /* Adjust top margin for better spacing */
+    padding: 5px 10px;
+    /* Adjust padding for better spacing */
+}
+
+/*******************************************/
+/**************** for logo ****************/
+/*****************************************/
+.logo a h1 {
+    color: #000 !important;
+}
+
+/*******************************************/
+/* for internal css off new service area  */
+/*****************************************/
+
+#block-yui_3_17_2_1_1720516738964_3057 {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Add a dark overlay */
+#block-yui_3_17_2_1_1720516738964_3057::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+#block-yui_3_17_2_1_1720516738964_3057 .sqs-block-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure parent containers do not restrict the section's dimensions */
+.content-wrapper,
+.section-border,
+.section-background,
+.sqs-layout,
+.sqs-row,
+.col,
+.sqs-block {
+    width: 100%;
+    max-width: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+/* Ensure section-border and section-background are transparent */
+#page .page-section .section-border,
+#page .page-section .section-background {
+    background: transparent;
+}
+
+/* Remove default padding and margins */
+.sqs-block-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.new-code {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+}
+
+/* this css for how it works section  */
+
+:root {
+    --button-bg-color: #a0c4b0;
+    /* Turquoise color */
+    --button-hover-bg-color: #91b9a3;
+    /* Darker shade for hover effect */
+    --section-bg-color: #fff;
+    /* Pure white background color for sections */
+    --text-color: #333;
+    /* Dark text color */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.how-it-works-section {
+    text-align: center;
+    padding: 40px 20px;
+    /* Increased padding to give more height to the section */
+    background-color: var(--section-bg-color);
+}
+
+.how-it-works-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black !important;
+    /* Setting text color to black */
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    /* Center content in the container */
+    align-items: stretch;
+    /* Align all items to stretch to the same height */
+    gap: 20px;
+    /* Adjusted gap for better spacing */
+    margin-bottom: 30px;
+    /* Adjust to move the Book Now button lower */
+    padding: 0 5%;
+    /* Padding on the sides to control overall alignment */
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensure content is evenly spaced */
+    align-items: center;
+    width: 30%;
+    /* Width of each step */
+    text-align: center;
+    /* Center the text */
+    padding: 0;
+    /* Remove any extra padding */
+    margin: 0;
+    /* Remove any extra margin */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /* Adjust this value to bring the image and text closer together */
+    height: 100%;
+    /* Ensure content-wrapper takes the full height */
+}
+
+.step img {
+    width: 80%;
+    height: 250px;
+    /* Ensures all images have the same height */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    /* Ensure consistent spacing */
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.step p {
+    font-size: 1em;
+    color: #555;
+    margin-top: -10px;
+    /* Ensure consistent spacing */
+    text-align: center;
+    /* Center the paragraph text */
+    max-width: 80%;
+    /* Reduce the width of the paragraph text to make it more compact */
+}
+
+.book-now-button {
+    padding: 15px 30px;
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-now-button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.separator {
+    width: 50px;
+    height: 5px;
+    background-color: var(--button-bg-color);
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 100%;
+        margin-bottom: 20px;
+        /* Add spacing between stacked items */
+        text-align: center;
+        /* Center the text */
+    }
+
+    .step img {
+        width: 80%;
+        /* Adjust the image width if needed */
+        height: 250px;
+        /* Set a fixed height to ensure uniformity */
+        object-fit: cover;
+        /* Ensure the image covers the area without distortion */
+    }
+
+    .step h3 {
+        text-align: center;
+        /* Center the heading */
+    }
+
+    .step p {
+        text-align: center;
+        /* Center the paragraph */
+        margin-top: -15px !important;
+        /* Reduce spacing between title and description */
+    }
+}
+
+/* css for reliable section  */
+
+#page-section-6690c69129c1781258d77700 {
+    position: relative;
+    /* Ensure the section is positioned relatively */
+    background-image: url('https://static1.squarespace.com/static/6682192d1022a0098a1c29d9/t/66ba17ea5c003d228109fb1c/1723471855037/Trusted+Professionals+%282%29.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Add a dark overlay */
+#page-section-6690c69129c1781258d77700::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Match the opacity to the second section */
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+#page-section-6690c69129c1781258d77700 .sqs-block-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    /* Add padding to avoid content sticking to edges */
+    box-sizing: border-box;
+    /* Include padding in width/height calculations */
+}
+
+/* Ensure parent containers do not restrict the section's dimensions */
+.content-wrapper,
+.section-border,
+.section-background,
+.sqs-layout,
+.sqs-row,
+.col,
+.sqs-block {
+    width: 100%;
+    max-width: none !important;
+    /* Ensure max-width is not restricting */
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    /* Avoid cutting off content */
+}
+
+/* Ensure section-border and section-background are transparent */
+#page .page-section .section-border,
+#page .page-section .section-background {
+    background: transparent !important;
+}
+
+/* Remove default padding and margins */
+.sqs-block-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* css for discount section  */
+
+.section-container {
+    background-color: rgb(242, 240, 233);
+    padding: 30px 0;
+}
+
+#yui_3_17_2_1_1721029560499_470 {
+    color: black !important;
+}
+.custom-content p.last {
+	margin: 40px 0;
+	font-size: 19px;
+}
+.custom-content h3 {
+	margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 400;
+}
+#yui_3_17_2_1_1721029560499_470 {
+	font-weight: 400;
+	font-size: 36px;
+}

@@ -1,0 +1,93 @@
+@media all and (max-width: 1600px) {
+    .logo {
+        position: unset !important;
+        transform: unset;
+    }
+    .header-area .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }    
+    nav ul {
+        float: right;
+    }
+}
+@media all and (max-width: 1400px) {
+    .new-code {
+        width: 100%;
+    }
+    #block-yui_3_17_2_1_1720516738964_3057 {
+        min-height: 126vh;
+    }
+    .new-code{
+        top: 10%;
+        transform: unset;
+    }
+}
+@media all and (max-width: 1200px) {
+    .logo a h1 {
+        color: red !important; /* Avoid using !important if possible */
+        font-size: 23px;
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+@media all and (min-width: 992px) {
+    .menu{
+        display: block !important;
+    }
+}
+@media all and (max-width: 992px) {
+    .header-area{
+        position: relative;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .menus,.close-btn{
+        font-size: 28px;
+    }
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+        z-index: 500000;
+        background: rgba(241, 239, 231, 0.9);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 30px;
+    }
+    nav ul li a{
+        font-size: 25px;
+        padding-top: 1rem;
+        z-index: 100000;
+    }
+}
+@media all and (max-width: 768px) {
+    .outer-container {
+        padding: 0;
+    }
+    .new-code{
+        top: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .container h1{
+        margin: 0;
+    }
+    label {
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 768px) {
+    .container h1 {
+        margin: 0;
+        font-size: 22px;
+        padding: 5px;
+    }
+}
